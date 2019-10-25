@@ -1,0 +1,245 @@
+/* Main style sheet for Aitken Bicycles
+    Author: Randy Aitken
+    Created: 9/10/19
+    Notes: Created for IST-336-940, SIU
+
+    Last Edited: 10/25/19
+
+*/
+
+
+/* default styles for all pages */
+
+
+html{
+        background-color:#fbfbfb;
+}
+body{
+    /*font styles */
+    font-family: Helvetica, sans-serif;
+    font-size: 100%;
+    
+    /* display styles */
+    width: 95%;
+    margin: 1em 1.085%;
+
+}
+h1, h2, h3{
+    padding: 5px 0.543%;
+}
+h1{
+    color:firebrick;
+    font-size: 1.75em;
+}
+h2{
+    font-size: 1.5em;
+}
+h3{
+    font-size: 1.125em;
+}
+p{
+    padding-right: 5px 0.5%;
+    padding-left: 5px 0.5%;
+}
+li{
+    padding-left: 10px 1.1%;
+}
+img{
+    vertical-align: middle;
+    width: auto;
+    height: auto;
+    margin: auto;
+}
+label{
+    float: left;
+    width: 8em;
+    text-align: right;
+}
+input, select{
+    width: 15em;
+    margin-left: 1em;
+    margin-bottom: 0.5em;
+}
+input:focus{
+    border: 2px solid navy;
+}
+textarea{
+    resize: none;
+    margin-left: 1em;
+    margin-bottom: 0.5em;
+    width: 22em;
+    height: 5em;
+}
+table{
+    table-layout: fixed;
+    border-collapse: separate;
+    white-space:normal;
+}
+th, td{
+    border: 1px solid black;
+    padding: 0.2em 0.7em;
+    text-align: center;
+}
+th.left, td.left {
+    text-align: left;
+}
+thead, tfoot{
+    background-color: burlywood;
+    font-weight: bold;
+}
+button{
+    background-color: silver;
+    margin-left: 4em;
+}
+/* header styles */
+
+header p{
+    align-content: center;
+    font-size: 1.3em;
+}
+header img{
+    display: block;
+    border-style:solid;
+    border-color: #4c4c4c;
+    border-radius: 20px;
+    max-height: 200px;
+    max-width: 100%;
+}
+header h1{
+    text-align: center;
+}
+header p{
+    margin-top: 0;
+    font-size: 1.15em;
+    color:grey;
+}
+figcaption{
+    display: block;
+    font-weight: bold;
+    padding-top: 0.25em;
+    text-align: center;
+    font-size: 0.65em;
+    color:grey;
+}
+.swap {
+    background-image: url(https://images.pexels.com/photos/1619299/pexels-photo-1619299.jpeg?cs=srgb&dl=backlit-bicycle-biker-1619299.jpg);
+    background-repeat: no-repeat;
+    display: block;
+    background-size:288px 192px;
+    width: 288px;
+    height:192px;
+    border-style:solid;
+    border-color: #4c4c4c;
+    border-radius: 20px;
+    margin: auto;
+}
+.swap a{
+    display: block;
+}
+.swap a img{
+    opacity: 1;
+}
+.swap a:hover img{
+    opacity: 0;
+    
+}
+/* main styles */
+.thumb {
+    max-width :100%;
+}
+
+/* aside styles */
+aside{
+    border-style: groove;
+    border-width: thin;
+    background-color: aliceblue;
+    
+}
+aside p{
+    margin: 10px 1.1%;
+    padding-right: 10px 1.1%;
+    padding-left: 10px 1.1%;
+}
+aside ul{
+    padding-right: 10px 1.1%;
+    padding-left: 10px 1.1%;
+}
+/* footer styles */
+footer h3{
+    margin-bottom: 0;
+}
+footer p{
+    margin-top: 0;
+    font-size: 0.85em;
+    color:grey;
+}
+
+fieldset{
+    max-width:500px;
+    border: 0px;
+    border-top: 0.5px solid navy;
+    margin-bottom: 0.5em;
+}
+fieldset label{
+    float:none;
+}
+fieldset input{
+    width: 1em;
+}
+
+/* other general styles */
+#videoplayer{
+    display: block;
+    margin: auto;
+    max-width: 100%; 
+}
+
+#mobile_menu{ display: none;}
+
+#nav_menu ul li{
+	list-style-type: none;
+    float:left; 
+    width: 20%;
+}
+
+#nav_menu a{
+    /* text styles */
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    color: white;
+    font-weight: bold;
+    
+    /* navbar styles */
+    width: 5px 0.5%;
+    padding: 10px 1.1%;
+    margin: 10px 1.1%;
+    background-color:#4c4c4c;
+
+}
+@media screen and (max-width: 40em) {
+	#nav_menu {	display:none; }
+    #mobile_menu {
+        /* text styles */
+        text-align: right;
+        font-weight: bold;
+        /* navbar styles */
+        display:inline-block;
+        background-color:#4c4c4c;
+    }
+    #mobile_menu ul{	list-style-type: none;}
+    #mobile_menu a{
+        text-decoration: none;
+        display: block;
+        color: white;
+        font-weight:normal;
+    }
+	.slicknav_menu {
+		display:block;
+	}
+}
+
+/* styles for specific ids */
+#services_page td:nth-child(1){ width:30%; }
+#services_pagetd:nth-child(2){ width:50%;}
+#services_page td:nth-child(3), td:nth-child(4) { width:10%;}

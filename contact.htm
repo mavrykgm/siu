@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!-- <Header>
+    Title: Aitken Bicycles - Home
+    Author: Randy Aitken
+    Created: 08/29/19
+    Notes: Created for IST-336-940, SIU
+
+    Last Updated: 09/20/19
+-->
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <title>Aitken Bicycles - Contact</title>
+    
+    <meta name="description" content="This page provides contact information for Aitken Bicycles"/>
+    <meta name="keywords" content="fake bicycle contact"/>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/gridlayout.css">
+    <link rel="shortcut icon" href="images/Icozilla.ico">
+
+<!-- SlickNav Controls -->
+    <link rel="stylesheet" href="styles/slicknav.css">
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#nav_menu').slicknav({prependTo:"#mobile_menu"});
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+            var requiredCheckboxes = $('.cbOptions :checkbox[required]');
+            requiredCheckboxes.change(function(){
+                if(requiredCheckboxes.is(':checked')) {
+                    requiredCheckboxes.removeAttr('required');
+                } else {
+                    requiredCheckboxes.attr('required', 'required');
+                }
+            });
+        });
+    </script>
+ 
+
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    
+</head>
+<body id="contact_page">
+    <nav id="mobile_menu"></nav>
+    <nav id="nav_menu">
+        <ul>
+            <li><a href="index.htm">Home</a></li>
+            <li><a href="rentals.htm">Rental</a></li>
+            <li><a href="sales.htm">Sales</a></li>
+            <li><a href="services.htm">Services</a></li>
+            <li><a href="contact.htm">Contact Us</a></li>
+        </ul>
+    </nav>
+    <header>
+        <figure class="swap">
+        <a><img src="images/forest_720x480.jpg" alt="bicycle.jpg"></a>
+        <figcaption >This is a caption.</figcaption>
+        </figure>
+        <h1 >Contact Us</h1>
+    </header>
+    <main>
+        <form>
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname"
+                              pattern="^[a-zA-Z ]{15,25}$"
+                              title="Entry must be between 15-25 characters. 
+                                     I hope your name isn't Randy Aitken."
+                              required><br>
+            
+            <label for="address">Address</label>
+            <input type="text" id="address" 
+                              pattern="^[a-zA-Z0-9 ]{15,50}$"
+                              title="Entry must be between 15-50 characters."
+                              required><br>
+            
+            <label for="city">City</label>
+            <input type="text" id="city" 
+                              pattern="^[a-zA-Z ]{4,25}$"
+                              title="Entry must be between 4-25 characters."
+                              required><br>
+            
+            <label for="state">State</label>
+            <select id="state" required>
+                <option value="">Select a state</option>
+                <option value="AL">Alabama</option>
+                <option value="AK">Alaska</option>
+                <option value="AZ">Arizona</option>
+                <option value="AR">Arkansas</option>
+                <option value="CA">California</option>
+                <option value="CO">Colorado</option>
+            </select><br>
+            
+            <label for="postalcode">Postal Code</label>
+            <input type="text" id="postalcode"
+                             placeholder="5 or 9 digit"
+                             pattern="^\d(5)[\-]\d(4))?"
+                             title="Enter format 99999 or 99999-9999"
+                             required><br>
+            
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" 
+                                 placeholder="999-999-9999"
+                                 pattern="\d{3})[\-]\d{3}[\-]\d{4}" 
+                                 title="Enter format 999-999-9999"
+                                 required><br>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" required><br>
+            
+            <label for="submitdate">Submission Date</label>
+            <input type="date" id="submitdate" 
+                                    title="Enter date mm/dd/yyyy"
+                                    required><br>
+            <fieldset id="InquiryType" class="cbOptions">
+                <legend>Inquiry Type</legend>
+                <input name="cbOption[]" type=checkbox id="inquiry1" value = "sales" title="At least one option must be selected." required/>
+                <label for="inquiry1">Sales</label>
+                <input name="cbOption[]" type=checkbox id="inquiry2" value = "service" title="At least one option must be selected." required>
+                <label for="inquiry2">Service</label>
+                <input name="cbOption[]" type=checkbox id="inquiry3" value = "rental" title="At least one option must be selected." required>
+                <label for="inquiry3">Rental</label>
+            </fieldset>
+            
+            <fieldset id="BicycleType" class="rbOptions">
+                <legend>Bicycle Type</legend>
+                <input name="rbOption[]" type=radio id="selection1" value = "M1A" title="Select one option." required>
+                <label for="selection1">M1A</label>
+                <input name="rbOption[]" type=radio id="selection2" value = "M1B" title="Select one option." required>
+                <label for="selection2">M1B</label>
+                <input name="rbOption[]" type=radio id="selection3" value = "M2A" title="Select one option." required>
+                <label for="selection3">M2A</label>
+                <input name="rbOption[]" type=radio id="selection4" value = "M2B" title="Select one option." required>
+                <label for="selection4">M2B</label>
+            </fieldset>
+            <label for="password">Create Password</label>
+            <input type="password" id="password" required><br>
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Dad jokes get discounts."
+                                    pattern="^[a-zA-Z ]{20,200}$"
+                                    title="Enter between 20-200 characters."
+                                    required></textarea><br>
+            <button type="submit" id="submitform">Submit</button>
+            <button type="reset" id="resetform">Reset</button>
+        </form>
+    </main>
+</body>
+</html>

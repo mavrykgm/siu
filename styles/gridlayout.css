@@ -1,0 +1,99 @@
+/* Grid Layout style sheet for Aitken Bicycles
+    Author: Randy Aitken
+    Created: 10/3/19
+    Notes: Created for IST-336-940, SIU
+
+    Last Edited: 10/16/19
+*/
+
+
+/* @author jeff miller, Millers Bicycles CSS Style Page, Southern Illinois University  Developed: 9-14-2019  Tested: 10-02-2019 */ 
+
+
+/* default styles for grid pages */
+
+body{
+    /*display*/
+    display: grid;
+    background-color: lightyellow;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 10px;
+
+}
+/* 2-column grid for image and descriptive text */
+.interior_grid{
+    display:grid;
+    grid-template: repeat(1,1fr) / minmax(100px,20%) 1fr;
+    justify-content: center;
+    grid-gap: 15px;
+}
+
+/* default grid layout */
+
+nav{    grid-row: 1/2; grid-column: 1 / span 12;}
+header{ grid-row: 2/3; grid-column: 1 / span 12;}
+main{ grid-row: 3/4; grid-column: 1 / span 12;}
+
+#main_page body{ grid-template-rows: 80px 1fr 1fr 1fr;}
+#main_page main{ grid-row: 3/4; grid-column: 1 / span 12;}
+#main_page footer{ grid-row: 4/5; grid-column: 1 / span 12;}
+
+#rentals_page body{ grid-template-rows: 1fr 1fr 1fr; }
+#rentals_page main {grid-row: 3/4; grid-column: 1 / span 8; }
+#rentals_page aside{  grid-row: 3/4; grid-column: 9 / span 4;}
+
+#sales_page body{ grid-template-rows: 1fr 1fr 1fr; }
+#sales_page main {grid-row: 3/4; grid-column: 1 / span 8; }
+#sales_page aside{  grid-row: 3/4; grid-column: 9 / span 4;}
+
+
+@media only screen and (max-width: 767px) {
+    #rentals_page body{ grid-template-rows: 150px 1fr 1fr 1fr; }
+    #rentals_page main {grid-row: 3/4; grid-column: 1 / span 12; }
+    #rentals_page aside{  grid-row: 4/5; grid-column: 1 / span 12;}
+    
+    #sales_page body{ grid-template-rows: 150px 1fr 1fr; }
+    #sales_page main {grid-row: 3/4; grid-column: 1 / span 12; }
+    #sales_page aside{  grid-row: 4/5; grid-column: 1 / span 12;}
+    
+    #services_page th, td{ 
+        display: block;
+        text-align: left;
+        padding: 0;
+        width:100%;
+        border: none;
+    }
+    #services_page thead{ display:none}
+    #services_page td:nth-child(1){
+        font-weight:bold;
+        font-size:110%;
+        width: 100%;
+        background-color: burlywood;
+        border-top: 1px solid black;
+    }
+    #services_page td:nth-child(2){width: 100%}
+    #services_page td:nth-child(3){width: 100%}
+    #services_page td:nth-child(4){width: 100%}
+    
+}
+
+/* section styles */
+
+/*header styles */
+.interiorhdr_grid{
+    display:grid;
+    grid-template: repeat(1,1fr) / 200px 1fr;
+    grid-gap: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

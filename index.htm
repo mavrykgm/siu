@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- <Header>
+    Title: Aitken Bicycles - Home
+    Author: Randy Aitken
+    Created: 08/29/19
+    Notes: Created for IST-336-940, SIU
+
+    Last Updated: 10/7/19
+    open source audio file from: 
+    https://freemusicarchive.org/music/Kevin_MacLeod/Impact/Impact_Moderato_1500
+-->
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <title>Aitken Bicycles</title>
+    
+    <meta name="description" content="This is a school page designed for pretending to sell bicycles."/>
+    <meta name="keywords" content="fake bike sales"/>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/gridlayout.css">
+    <link rel="shortcut icon" href="images/Icozilla.ico">
+    
+<!-- SlickNav Controls -->
+    <link rel="stylesheet" href="styles/slicknav.css">
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> 
+    <script src="js/jquery.slicknav.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+                $('#nav_menu').slicknav({prependTo:"#mobile_menu"});
+        });
+    </script>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    
+    <audio id="audioplayer" 
+           src ="media/audiosample.mp3"
+           autoplay loop></audio>
+    
+</head>
+<body id="main_page">
+    <nav id="mobile_menu"></nav>
+    <nav id="nav_menu">
+        <ul>
+            <li><a href="index.htm">Home</a></li>
+            <li><a href="rentals.htm">Rental</a></li>
+            <li><a href="sales.htm">Sales</a></li>
+            <li><a href="services.htm">Services</a></li>
+            <li><a href="contact.htm">Contact Us</a></li>
+        </ul>
+    </nav>
+    <header>
+        <figure class="swap">
+        <a><img src="images/forest_720x480.jpg" alt="bicycle.jpg"></a>
+        <figcaption >This is a caption.</figcaption>
+        </figure>
+        
+        <h1 >Aitken Bicycle Home</h1>
+        <p>If we were a real shop we would sell bicycles to people that wanted to buy them. But we arent. So you cannot.Thank you for visiting. </p>
+    </header>
+    <main>
+        <h2>Current Selections</h2>
+    <!--list of current selections -->
+        <ul>
+            <li>M1A - a bike with wheels!</li>
+            <li>M1B - a bike with brakes!</li>
+            <li>M2A - a bike with style!</li>
+            <li>M2B - a bike with all three!</li>
+        </ul>
+    </main>
+    <footer>
+    <!--contact information -->
+        <h3>Contact Us</h3>
+        <p>(815)867-5309
+        <br>221B Baker St 
+        <br>Marylebone, London 
+        <br>NW1 6XE, UK
+        <br><a href="http://siu.edu">Southern Illinois University</a></p>
+    </footer>
+</body>
+</html>
